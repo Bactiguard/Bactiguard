@@ -1,14 +1,14 @@
 <html>
 
-<head>
-    <title>Interface 1</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="interface_1.css"/>
-</head>
+    <head>
+        <title>Interface 1</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="interface_1.css"/>
+    </head>
 
-<body>
+    <body>
 
-    <div class="form-box">
+        <div class="form-box">
 
         <form name="login" id="login" action="interface_2.html" method="get">
              <p>Username : <input type="text" id="uName"></p>
@@ -21,50 +21,52 @@
                 </div>
              <button onclick="myFunction()" type="button">Login</button>
         </form>
-    </div>
+        </div>
 
-<script>
-var usersArray = ["admin","1234"];
-function checkUserName(userName)
-{
-    if(userName == document.getElementById("uName").value)
-    {
-    return userName;
-    }
-}
-function myFunction()
-{
-   varUserName= usersArray.find(checkUserName);
-   varUserNameIndex= usersArray.findIndex(checkUserName);
-
-if ( varUserName== null)
-{
-        document.getElementById("output1").innerHTML = "Invalid User Name" ;
-        document.getElementById("uName").value="" ;  
-        document.getElementById("uName").focus() ;    
-        document.getElementById("uPassword").value = " " ;    
-        document.getElementById("output2").innerHTML = "Invalid Password" ;             
-}
-
-else
-{ 
-        document.getElementById("output1").innerHTML =  "Valid User Name";   
-if(usersArray[varUserNameIndex+1]!= document.getElementById("uPassword").value)
-{
-        document.getElementById("output2").innerHTML = "Invalid Password"  ;   
-        document.getElementById("uPassword").value="";                  
-        document.getElementById("uPassword").focus() ;  
-}
-else
-{
-        document.getElementById("output2").innerHTML = "Valid Password";
-        name=document.getElementById("uName").value; 
-  	    document.login.submit();
+    <script>
             
-}
-}        
-}
-</script>
+        
+    var usersArray = ["admin","1234"];
+    function checkUserName(userName)
+    {
+        if(userName == document.getElementById("uName").value)
+        {
+        return userName;
+        }
+    }
+    
+    function myFunction()
+    {
+        varUserName= usersArray.find(checkUserName);
+        varUserNameIndex= usersArray.findIndex(checkUserName);
 
-</body>
+        if ( varUserName== null)
+        {
+            document.getElementById("output1").innerHTML = "Invalid User Name" ;
+            document.getElementById("uName").value="" ;  
+            document.getElementById("uName").focus() ;    
+            document.getElementById("uPassword").value = " " ;    
+            document.getElementById("output2").innerHTML = "Invalid Password" ;             
+        }
+        else
+        { 
+            document.getElementById("output1").innerHTML =  "Valid User Name";
+            
+        if(usersArray[varUserNameIndex+1]!= document.getElementById("uPassword").value)
+        {
+            document.getElementById("output2").innerHTML = "Invalid Password"  ;   
+            document.getElementById("uPassword").value="";                  
+            document.getElementById("uPassword").focus() ;  
+        }
+        else
+        {
+            document.getElementById("output2").innerHTML = "Valid Password";
+            name=document.getElementById("uName").value; 
+  	        document.login.submit();
+        }
+        }        
+    }
+    </script>
+
+    </body>
 </html>
