@@ -1,0 +1,85 @@
+html{
+    height: 100%;
+    width: 100%;
+    background-image: url(bg2.png);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.box{
+    width: 1000px;
+    height: 600px;
+    position: relative;
+    margin: 6% auto;
+    background: transparent;
+    padding: 5px;
+    margin-top: 150px;
+}
+
+.back{
+    text-align: right;
+    margin-right: 25px;
+    margin-top: 20px;
+    margin-bottom: 150px;
+}
+
+.back > a > button{
+    box-shadow: 5px 5px rgb(199, 199, 199); 
+    border-radius: 15px;
+    height: 40px;
+    width: 70px;
+}
+
+.row1{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.row2{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.row3{
+    margin-top: 50px;
+    text-align: center;
+}
+
+button:hover{
+    background-color: rgb(237, 255, 229);
+    font-weight: bold;
+}
+
+.row1 > a > button{
+    box-shadow: 5px 5px rgb(199, 199, 199);
+    border-radius: 15px;
+    border-width: 3px;
+    font-size: 20px;
+    width: 200px;
+    height: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.row2 > a > button{
+    box-shadow: 5px 5px rgb(199, 199, 199);
+    border-radius: 15px;
+    border-width: 3px;
+    font-size: 20px;
+    width: 200px;
+    height: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.row3 > a > button{
+    box-shadow: 5px 5px rgb(199, 199, 199);
+    border-radius: 15px;
+    border-width: 3px;
+    font-size: 20px;
+    width: 200px;
+    height: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
