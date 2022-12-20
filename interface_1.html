@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>Interface 1</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="interface_1.css"/>
+</head>
+
+<body>
+
+<h1>PORTAL PRODUCTION 1</h1>
+
+    <div class="form-box">
+
+        <form name="login" id="login" action="interface_2.html" method="get">
+             <p>Username : <input type="text" id="uName"></p>
+             <div class="vld1">
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span id="output1" style ="color: red;">  </span></p>
+                </div>
+             <p>Password : <input type="password" id="uPassword"></p>
+             <div class="vld2">
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span id="output2" style ="color: red;">  </span></p>
+                </div>
+             <button onclick="myFunction()" type="button">Login</button>
+        </form>
+    </div>
+
+<script>
+var usersArray = ["Production1","Bactiguard"];
+function checkUserName(userName)
+{
+    if(userName == document.getElementById("uName").value)
+    {
+    return userName;
+    }
+}
+function myFunction()
+{
+   varUserName= usersArray.find(checkUserName);
+   varUserNameIndex= usersArray.findIndex(checkUserName);
+
+if ( varUserName== null)
+{
+        document.getElementById("output1").innerHTML = "Invalid User Name" ;
+        document.getElementById("uName").value="" ;  
+        document.getElementById("uName").focus() ;    
+        document.getElementById("uPassword").value = " " ;    
+        document.getElementById("output2").innerHTML = "Invalid Password" ;             
+}
+
+else
+{ 
+        document.getElementById("output1").innerHTML =  "Valid User Name";   
+if(usersArray[varUserNameIndex+1]!= document.getElementById("uPassword").value)
+{
+        document.getElementById("output2").innerHTML = "Invalid Password"  ;   
+        document.getElementById("uPassword").value="";                  
+        document.getElementById("uPassword").focus() ;  
+}
+else
+{
+        document.getElementById("output2").innerHTML = "Valid Password";
+        name=document.getElementById("uName").value; 
+  	    document.login.submit();
+            
+}
+}        
+}
+</script>
+
+</body>
+</html>
